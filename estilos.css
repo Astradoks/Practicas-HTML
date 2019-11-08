@@ -1,0 +1,26 @@
+.col {
+    text-align: center;
+    width: 25%;
+    outline-color: blue;
+    outline: 1px solid;
+    margin-left: 8px;
+}
+.fila {
+    margin: 50px;
+}
+
+.nueva {
+    font-size: 50px;
+    color: red;
+}
+
+.parrafo {
+    margin: 10px;
+    background-color: rgb(419,548,200);
+    outline: 2px solid;
+    width: 25%;
+    
+}
+.conte_form{
+    width: 50%;
+}
