@@ -1,9 +1,8 @@
 .col {
     text-align: center;
-    width: 25%;
-    outline-color: blue;
-    outline: 1px solid;
-    margin-left: 8px;
+    border: black solid;
+    margin: 8px;
+    width: 75%;
 }
 .fila {
     margin: 50px;
@@ -13,14 +12,20 @@
     font-size: 50px;
     color: red;
 }
-
-.parrafo {
-    margin: 10px;
-    background-color: rgb(419,548,200);
-    outline: 2px solid;
-    width: 25%;
-    
-}
 .conte_form{
-    width: 50%;
+    
+    margin: 0 20%;
+    border: black solid;
+    padding: 5%;
+    background: rgb(204, 253, 232);
+}
+.form{
+    margin: 5%;
+    border: black solid;
+    background: rgb(233, 253, 204);
+    padding: inherit;
+}
+.inicio{
+    margin: 0 25%;
+    padding: 0 5%;
 }

@@ -5,44 +5,54 @@
     <title>Document</title>
     <link rel ="stylesheet" href="estilos.css">
 </head>
-<body id="top">
+<style>
+    .separacion{
+        margin: 10px;
+    }
+    .margenes{
+        margin: 5%;
+        background: rgb(230, 250, 247);
+    }
+    </style>
+<body id="top" class="margenes">
    <div class="contenedor">
        <div class="fila">
         <h1 class="nueva"> Archivo de prueba</h1>
-          <a href="#mitad">Ir a la mitad</a>
+          <div class="inicio"><a href="#mitad">Ir a la mitad</a>
           <a href="#final">Ir al final</a>
            <div class="col">Ingrese una frase</div>
            <input type="text" class="col"> 
            <div class="col" id="respuesta"></div>
-               <p class="parrafo"> No se que estoy haciendo</p>
+               <p class="col"> No se que estoy haciendo</p>
                <a href="tel:+593984483294">Telefono</a>
                <!-- este link sirve para un correo -->
                <a href="mailto:paul.bonilla3000@hotmail.com">Mail</a>
        </div>
+       </div>
    </div>
    <div class="conte_form">
-   <form id="datos_Personales" method="get" action="index.html">
-      <div>
-          <label for="nombre">Nombre: </label>
+   <form class="form" id="datos_Personales" method="get" action="index.html">
+      <div class="separacion">
+          <label for="nombre">Nombre:</label>
            <input id="nombre" type="text" name="texto" placeholder="nombre">
        </div>
-       <div>
+       <div class="separacion">
           <label for="apellido">Apellido: </label>
            <input id="apellido" type="text" name="lectura" value="Bonilla" readonly>
        </div>
-       <div>
+       <div class="separacion">
           <label for="cedula">Cédula: </label>
            <input id="nombre" type="text" name="lectura" value="1725092108" disabled>
        </div>
-       <div>
+       <div class="separacion">
           <label for="telef">Teléfono: </label>
            <input id="telef" type="number" name="numero">
        </div>
-       <div>
+       <div class="separacion">
           <label for="mail">Email: </label>
            <input id="mail" type="email" name="email" required>
-       </div>
-       <div>
+       </div >
+       <div class="separacion">
            <lable for="fecha">Fecha: </lable>
            <input id="fecha" type="date" name="fecha">
        </div>
@@ -60,7 +70,7 @@
            <input type="radio" name="bebida" value="3">jugo
            <input type="radio" name="bebidas" value="4">batido
        </div>
-       
+       <br/>
        <select name="ciudad">
            <option value="1">Quito</option>
            <option value="2">Guayaquil</option>
@@ -68,7 +78,9 @@
            <option value="4">Ibarra</option>
        </select>
        <br />
-       <textarea name="mensaje" id="mensaje" placeholder="escriba su mensaje" rows="10" cols="80">Hola como estas</textarea>
+       <br />
+       <textarea name="mensaje" id="mensaje" placeholder="escriba su mensaje" rows="10" cols="30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit nesciunt sit est, voluptate, aperiam libero laborum minus esse quaerat nemo dignissimos tenetur incidunt voluptatem quod corrupti maiores nostrum dolore.</textarea>
+       <br />
        <br />
        <input type="submit" name="enviar" value="Enviar">
        <input type="reset" name="limpiar" value="Limpiar" accesskey="C">
@@ -109,6 +121,7 @@
    <p>Rerum alias cupiditate odio voluptatum iure iste expedita, ipsum esse ipsa consequuntur? Officiis repudiandae perspiciatis veritatis, iste debitis eveniet, quidem odio. Totam alias minima asperiores, iste fuga fugiat assumenda explicabo?</p>
    <p>Consequuntur corporis, molestiae! Officia maiores expedita id sapiente consectetur, minus aliquid dolorum veniam quasi culpa similique aspernatur quaerat sequi labore dicta, veritatis totam iste, nostrum fugit. Nihil, velit dolore sequi.</p>
    <h2 id="mitad">Mitad de la pagina</h2>
+   <a href="#top">Ir al inicio</a>
    <p>Quis atque dolorum quaerat obcaecati architecto eius adipisci, eaque dolorem nulla maxime ullam nemo soluta velit at, ex libero earum voluptas blanditiis et perferendis quos quas praesentium voluptatum sed! Ipsam.</p>
    <p>Optio maiores necessitatibus nisi magni nemo reiciendis suscipit doloribus deleniti deserunt, atque, exercitationem veniam similique molestias nostrum ea blanditiis aspernatur qui ad. Nulla odit, consequatur quae, obcaecati nostrum suscipit facere.</p>
    <p>Labore officiis velit ratione dolore, nisi dolorum, commodi saepe a similique itaque in temporibus consequuntur amet ipsum possimus alias numquam ea neque sed deserunt autem qui illum facilis. Mollitia, consequuntur.</p>
