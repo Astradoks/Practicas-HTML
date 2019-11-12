@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+</head>
+<style>
+    .ingreso {
+        background: #c1cbde;
+        border: black solid;
+        text-align: center;
+        margin: 1% 2%;
+        padding: 1%;
+        font-size: 20px;
+    }
+    .titulo{
+        color: #ff3100;
+        text-align: center;
+        font-size: 50px;
+    }
+    .pag{
+        background: #cdf8e1;
+    }
+    .ejercicio{
+        border: black solid;
+        margin: 5% 10%;
+        padding: 5%;
+        background: #f5d4b7;
+    }
+</style>
+<body class="pag">
+   <div class="ejercicio">
+        <h1 class="titulo">Special Merge</h1>
+        <div id= "a1" class="ingreso">Array 1: </div>
+        <div id= "a2" class="ingreso">Array 2: </div>
+        <div id= "au" class="ingreso">Array unido: </div>
+        <div id= "ao" class="ingreso">Array ordenado: </div>
+    </div>
+    <script>
+        var array1 = [1,5,7,2];
+        var array2 = [6,0,3,1];
+        var arrayU = [];
+        var cadena = '';
+        var cadenaU = '';
+        for (var i = 0; i<array1.length; i++){
+            cadena += array1[i]+' ';
+            cadenaU += array1[i]+' ';
+        }
+        document.getElementById('a1').innerHTML = 'Array 1 : '+cadena;
+        cadena = '';
+        for (var i = 0; i<array2.length; i++){
+            cadena += array2[i]+' ';
+            cadenaU += array2[i]+' ';
+        }
+        document.getElementById('a2').innerHTML = 'Array 2 : '+cadena;
+        document.getElementById('au').innerHTML = 'Array unido : '+cadenaU;
+        var arrayO = cadenaU.split('');
+        for (i = 0; i < arrayO.length; i++){
+            
+        }
+    </script>
+</body>
+</html>
