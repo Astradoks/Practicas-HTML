@@ -11,12 +11,13 @@
         text-align: center;
         margin: 1% 2%;
         padding: 1%;
-        font-size: 20px;
+        font-size: 30px;
     }
     .titulo{
         color: #ff3100;
         text-align: center;
         font-size: 50px;
+        margin-top: 0;
     }
     .pag{
         background: #cdf8e1;
@@ -24,21 +25,38 @@
     .ejercicio{
         border: black solid;
         margin: 5% 10%;
-        padding: 5%;
+        padding: 3%;
         background: #f5d4b7;
+    }
+    .inputs{
+        margin: 1% 0 1% 2%;
+        font-size: 25px;
+        border: black solid;
+        width: 30%;
+    }
+    .etiqueta{
+        font-size: 25px;
+        margin-left: 2%;
     }
 </style>
 <body class="pag">
    <div class="ejercicio">
         <h1 class="titulo">Special Merge</h1>
+        <lable class="etiqueta">INGRESE LOS DOS ARRAYS</lable><br/>
+        <input id="arr1" type="text" name="array1" class="inputs" placeholder="Ingrese separado por espacio">
+        <input id="arr2" type="text" name="array2" class="inputs" placeholder="Ingrese separado por espacio">
+        <button class="inputs" onclick="arreglar()">Agregar</button>
         <div id= "a1" class="ingreso">Array 1: </div>
         <div id= "a2" class="ingreso">Array 2: </div>
         <div id= "au" class="ingreso">Array unido: </div>
         <div id= "ao" class="ingreso">Array ordenado: </div>
     </div>
     <script>
-        var array1 = [1,5,7,2];
-        var array2 = [6,0,3,1];
+        function arreglar(){
+           var array1 = document.getElementById('arr1').value;
+        array1 = array1.split(' ');
+        var array2 = document.getElementById('arr2').value;
+        array2 = array2.split(' ');
         var arrayU = [];
         var cadena = '';
         var cadenaU = '';
@@ -54,9 +72,27 @@
         }
         document.getElementById('a2').innerHTML = 'Array 2 : '+cadena;
         document.getElementById('au').innerHTML = 'Array unido : '+cadenaU;
-        var arrayO = cadenaU.split('');
-        for (i = 0; i < arrayO.length; i++){
-            
+        var arrayO = cadenaU.split(' ');
+        for (var i = 1; i < arrayO.length-1; i++){
+            var numero = parseInt(arrayO[i]);
+            arrayO.splice(i, 1);
+            for (j = i-1; j>=0; j--){
+                if (numero >= parseInt(arrayO[j])){
+                    arrayO.splice(j+1, 0, numero);
+                    break;
+                } else if (j == 0){
+                    arrayO.splice(0, 0, numero);
+                }
+            }
+        }
+        var cadenaO = '';
+        for (var i = 0; i < arrayO.length; i++){
+            cadenaO += arrayO[i]+' ';
+        }
+        if (cadenaO.length == 0){
+            cadenaO = null;
+        }
+        document.getElementById('ao').innerHTML = 'Array ordenado: '+cadenaO; 
         }
     </script>
 </body>
