@@ -17,40 +17,55 @@
         color: #ff3100;
         text-align: center;
         font-size: 50px;
-        margin-top: 0;
+        border: black solid;
+        margin: 0 30% 2%;
+        background: #ffffb3;
     }
     .pag{
         background: #cdf8e1;
     }
     .ejercicio{
         border: black solid;
-        margin: 5% 10%;
+        margin: 3% 10% 2%;
         padding: 3%;
         background: #f5d4b7;
     }
     .inputs{
-        margin: 1% 0 1% 2%;
+        margin: 2% 0 1% 2%;
         font-size: 25px;
         border: black solid;
         width: 30%;
     }
     .etiqueta{
         font-size: 25px;
-        margin-left: 2%;
+        padding: 1%;
+        margin: 2%;
+        border: black solid;
+        background: #93ff93;
+    }
+    .autor{
+        font-size: 20px;
+        margin: 0 10% 0 73%;
+        padding: 1%;
+        border: black solid;
+        text-align: end;
+        background: #d5ff23;
+        
     }
 </style>
 <body class="pag">
    <div class="ejercicio">
         <h1 class="titulo">Special Merge</h1>
-        <lable class="etiqueta">INGRESE LOS DOS ARRAYS</lable><br/>
-        <input id="arr1" type="text" name="array1" class="inputs" placeholder="Ingrese separado por espacio">
-        <input id="arr2" type="text" name="array2" class="inputs" placeholder="Ingrese separado por espacio">
+        <lable class="etiqueta">Ingrese los dos Arrays</lable><br/>
+        <input id="arr1" type="text" name="array1" class="inputs" placeholder="Ingreselos con espacios">
+        <input id="arr2" type="text" name="array2" class="inputs" placeholder="Ingreselos con espacios">
         <button class="inputs" onclick="arreglar()">Agregar</button>
         <div id= "a1" class="ingreso">Array 1: </div>
         <div id= "a2" class="ingreso">Array 2: </div>
         <div id= "au" class="ingreso">Array unido: </div>
         <div id= "ao" class="ingreso">Array ordenado: </div>
     </div>
+    <div class="autor">Realizado por Paul Bonilla</div>
     <script>
         function arreglar(){
            var array1 = document.getElementById('arr1').value;
