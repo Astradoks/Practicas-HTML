@@ -6,7 +6,7 @@
 </head>
 <style>
     .todo{
-        margin: 2%;
+        margin: 2% 5%;
         padding: 2%;
         background: #d5ff64;
         border: black solid;
@@ -27,23 +27,66 @@
     }
     .lable{
         font-size: 30px;
-        margin: 2%;
+        margin: 2% 0;
+    }
+    .input{
+        margin-bottom: 2%;
+        font-size: 25px;
+    }
+    .resultado{
+        font-size: 25px;
+        margin-bottom: 2%;
+    }
+    .autor{
+        font-size: 20px;
+        margin: 0 5% 0 78%;
+        padding: 1%;
+        border: black solid;
+        background: #23ffbb;
+    }
+    .boton{
+        font-size: 25px;
+        margin-left: 4%;
     }
 </style>
 <body>
  <div class="todo">
   <div class="titulo">Encode</div>
    <div class="ejercicio">
-      <lable class="lable">Ingrese una cadena de caractéres</lable>
-       <div class="cadena">
-           <input type="text" class="input">
-       </div>
-       <div class="resultado">Cadena Ingresada: </div>
-       <div class="resultado">Cadena Resultado: </div>
+     <div class="lable">Ingrese una cadena de caractéres</div>
+    <input id="inp" type="text" class="input">
+    <button class="boton" onclick="voltear()">Ingresar</button>
+    <div id="CI" class="resultado">Cadena Ingresada: </div>
+    <div id="CR" class="resultado">Cadena Resultado: </div>
    </div>
  </div>
+   <div class="autor">Realizado por Paul Bonilla</div>
     <script>
-        
+        function voltear(){
+            var cadenaI = document.getElementById('inp').value;
+            document.getElementById('CI').innerHTML = "Cadena Ingresada: "+cadenaI;
+            var cad = '';
+            for (var i = 0; i< cadenaI.length; i++){
+                var char = cadenaI.charAt(i).toLowerCase();
+                if(i == 0){
+                    char = char.toUpperCase();
+                }else if (char == ' '){
+                    x = 1;
+                }else if (x == 1){
+                    char = char.toUpperCase();
+                    x = 0;
+                }
+                console.log(char);
+                cad += char;
+            }
+            console.log(cad);
+            var cadenaR = '';
+            var x = 0;
+            for (var i = cad.length; i>=0; i--){
+                cadenaR += cad.charAt(i);
+            }
+            document.getElementById('CR').innerHTML = "Cadena Resultado: "+cadenaR;
+        }
     </script>
 </body>
 </html>
