@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+</head>
+<style>
+    .ejercicio{
+        margin: 5% 5% 2%;
+        padding: 2%;
+        border: black solid;
+        background: #ffb100;
+    }
+    .titulo{
+        font-size: 50px;
+        text-align: center;
+    }
+    .datos{
+        border: black solid;
+        padding: 2%;
+        background: #b1ff00;
+    }
+    .lable{
+        margin-left: 2%;
+        font-size: 35px;
+    }
+    .input{
+        font-size: 30px;
+        margin-left: 2%;
+        border: black solid;
+    }
+    .boton{
+        border: black solid;
+        font-size: 30px;
+        margin-left: 2%;
+    }
+    .respuesta{
+        font-size: 30px;
+        margin: 2%;
+        padding: 2%;
+        border: black solid;
+        background: #00ceff;
+    }
+    .autor{
+        font-size: 25px;
+        color: white;
+        text-align: end;
+        margin: 0 5% 0 74%;
+        padding: 1%;
+        border: black solid;
+        background: #ff0000;
+    }
+</style>
+<body>
+   <div class="ejercicio">
+       <div class="titulo">Simple Cipher</div><br>
+       <div class="datos">
+           <div class="lable">Ingrese la cadena que desee cifrar</div><br>
+           <input type="text" class="input" id="IN">
+           <button class="boton" onclick="cipher()">Cifrar</button>
+           <div class="respuesta">
+               <div id="CI">Cadena Ingresada: </div>
+               <div id="CC">Cadena Cifrada</div>
+           </div>
+       </div>
+   </div>
+   <div class="autor">Realizado por Paul Bonilla</div>
+    <script>
+        function cipher(){
+            var cadena = document.getElementById('IN').value;
+            var cadenaC = '';
+            for (i = 0; i<cadena.length; i++){
+                var char = cadena.charAt(i).charCodeAt(0);
+                if (i%2 == 0){
+                    if (char == 97){
+                        char = 122;
+                    }
+                }else {
+                    
+                }
+                cadenaC += String.fromCharCode(char);
+            }
+            document.getElementById('CI').innerHTML = "Cadena Ingresada: "+cadena;
+            document.getElementById('CC').innerHTML = "Cadena Cifrada: "+cadenaC;
+        }
+    </script>
+</body>
+</html>

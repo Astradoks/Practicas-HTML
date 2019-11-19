@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10</title>
+</head>
+<style>
+    .titulo{
+        font-size: 50px;
+        text-align: center;
+        margin: 2% 30%;
+        padding: 1%;
+        border: black solid;
+        background: #68ff85;
+    }
+    .ejercicio{
+        margin: 0 5%;
+        padding: 5%;
+        border: black solid;
+        font-size: 30px;
+        background: #d0ff67;
+    }
+    .lable{
+        margin-bottom: 2%;
+        font-size: 35px;
+    }
+    .input{
+        font-size: 30px;
+        margin-bottom: 2%;
+        border: black solid;
+    }
+    .boton{
+        font-size: 30px;
+        margin: 0 2% 2%;
+        border: black solid;
+    }
+    .respuesta{
+        margin: 2% 65% 0 0;
+        padding: 1%;
+        border: black solid;
+        background: #44ff93;
+    }
+    .autor{
+        font-size: 25px;
+        margin: 2% 5% 0 78%;
+        padding: 1%;
+        border: black solid;
+        background: #ffb44d;
+    }
+</style>
+<body>
+    <div class="titulo">Another Series Exercise</div>
+    <div class="ejercicio">
+        <div class="lable">Ingrese el índice del número que quiere ver de la serie</div>
+        <input class="input" id="in" type="number">
+        <button class="boton" onclick="serie()">Ingresar</button>
+        <div class="respuesta">
+           <div id="IN">Indice del número: </div><br>
+           <div id="NS">Número de la serie: </div>
+        </div>
+    </div>
+    <div class="autor">Realizado por Paul Bonilla</div>
+    <script>
+        function serie(){
+            var num = document.getElementById('in').value;
+            if (num%2 == 0){
+                var num1 = (num/2)-1;
+                var cont = 4 + (num1*8);
+            }else{
+                var num1 = (num/2)+0.5;
+                var cont = 3;
+                for (i = 1; i < num1; i++){
+                    cont += i;
+                }
+            }
+            if (num <= 0){
+                cont = -1;
+            }
+            document.getElementById('IN').innerHTML = "Indice del número: "+num;
+            document.getElementById('NS').innerHTML = "Número de la serie: "+cont;
+        }
+    </script>
+</body>
+</html>
